@@ -1,0 +1,33 @@
+<div class="logo">
+  <a routerLink="/" class="simple-text logo-mini">
+    <div class="logo-img">
+      <img src="./assets/img/angular2-logo-white.png" />
+    </div>
+  </a>
+  <a routerLink="/" class="simple-text logo-normal">
+    XEON-SOFT
+  </a>
+</div>
+<div class="sidebar-wrapper">
+  <ul class="nav">
+    <li routerLinkActive="active" *ngFor="let menuItem of menuItems" class="{{ menuItem.class }} nav-item">
+      <a [routerLink]="menuItem.children ?  null : menuItem.path" (click)="menuItem.isCollapsed = !menuItem.isCollapsed" [attr.aria-expanded]="!menuItem.isCollapsed" aria-controls="collapseExample"
+        data-toggle="collapse">
+        <i class="tim-icons  {{ menuItem.icon }}"></i>
+        <p>{{menuItem.title}}<b *ngIf="menuItem.children" class="caret"></b></p>
+      </a>
+      <div *ngIf="menuItem.children" [(ngbCollapse)]="menuItem.isCollapsed">
+        <ul class="nav">
+          <li *ngFor="let childItem of menuItem.children" routerLinkActive="active">
+            <a [routerLink]="menuItem.path + childItem.path">
+              <span class="sidebar-mini-icon">AA</span>
+              <span class="sidebar-normal">{{childItem.title}}</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </li>
+
+  </ul>
+
+</div>

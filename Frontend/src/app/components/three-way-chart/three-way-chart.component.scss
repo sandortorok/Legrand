@@ -1,0 +1,68 @@
+.my-calendar .form-control {
+    box-sizing: content-box;
+    padding-top: 5px;
+    padding-bottom: 5PX;
+}
+.my-calendar .btn{
+    border:1px solid white;
+    margin:0;
+    border-radius: 0.25rem;
+    background-color: transparent;
+    background-image: none;
+
+}
+::ng-deep ngb-datepicker.dropdown-menu{
+    .btn-light{
+        color: black;
+
+        &:hover{
+            color:white;
+            background-image: linear-gradient(to bottom left, #344675, #263148, #344675) !important;
+            filter:brightness(300%) !important;
+        }
+        &:active{
+            background-image: linear-gradient(to bottom left, #344675, #263148, #344675) !important;
+            filter: brightness(170%) !important
+        }
+
+    }
+    .bg-primary{
+        background-image: linear-gradient(to bottom left, #344675, #263148, #344675) !important;
+    }
+    .btn-link:active, .btn-link:hover, .btn-link:focus{
+        color: #344675 !important;
+    }
+}
+canvas{
+    background-color: #27293d;
+}
+.input-group{
+    margin-bottom: 0;
+}
+.btn{
+    margin:0
+}
+
+.chevron::before{
+    border-style: solid;
+    border-width: .29em .29em 0 0;
+    content: "";
+    display: inline-block;
+    height: .69em;
+    left: .05em;
+    position: relative;
+    top: .15em;
+    transform: rotate(-45deg);
+    vertical-align: middle;
+    width: .69em;
+}
+.chevron.bottom::before{
+    top: -.3em;
+    transform: rotate(135deg);
+}
+.btn.btn-link:focus{
+    color:#344675 !important;
+}
+.btn.btn-link:hover{
+    color:white !important;
+}

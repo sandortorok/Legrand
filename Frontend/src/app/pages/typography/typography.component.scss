@@ -1,0 +1,35 @@
+.form-control {
+    box-sizing: content-box;
+    padding-top: 5px;
+    padding-bottom: 5PX;
+}
+.btn{
+    border:1px solid white;
+    margin:0;
+    border-radius: 0.25rem;
+    background-color: transparent;
+    background-image: none;
+
+}
+::ng-deep ngb-datepicker.dropdown-menu{
+    .btn-light{
+        color: black;
+
+        &:hover{
+            color:white;
+            background-image: linear-gradient(to bottom left, #344675, #263148, #344675) !important;
+            filter:brightness(300%) !important;
+        }
+        &:active{
+            background-image: linear-gradient(to bottom left, #344675, #263148, #344675) !important;
+            filter: brightness(170%) !important
+        }
+
+    }
+    .bg-primary{
+        background-image: linear-gradient(to bottom left, #344675, #263148, #344675) !important;
+    }
+    .btn-link:active, .btn-link:hover, .btn-link:focus{
+        color: #344675 !important;
+    }
+}

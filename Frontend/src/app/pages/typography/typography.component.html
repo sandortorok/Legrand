@@ -1,0 +1,12 @@
+<div class=" content">
+	<form class="row row-cols-sm-auto">
+		<div class="col-12">
+			<div class="input-group" style="width: 300px">
+				<input class="form-control" placeholder="yyyy-mm-dd" name="dp" [displayMonths]="displayMonths" 
+					[navigation]="navigation" [outsideDays]="outsideDays" [showWeekNumbers]="showWeekNumbers"
+					ngbDatepicker #d="ngbDatepicker" />
+				<button class="btn btn-outline-secondary bi bi-calendar3" (click)="d.toggle()" type="button"></button>
+			</div>
+		</div>
+	</form>
+</div>

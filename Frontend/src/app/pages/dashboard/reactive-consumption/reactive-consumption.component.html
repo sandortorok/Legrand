@@ -1,0 +1,15 @@
+<div class="content">
+    <div class="row">
+        <div class=" col-lg-12">
+            <app-three-way-chart
+              title="Meddő fogyasztás (kVArh)" chartid="chartBig8" endPointName="kWh" measureUnit="kVArh"
+              [inputData]="[
+                    {type: 20599, rgb: '0,0,0', title: 'Pozitív háromfázisú összes meddő fogyasztás'},
+                    {type: 20601, rgb: '255,255,255', title: 'Negatív háromfázisú összes meddő fogyasztás'}
+              ]"
+              title1="Pozitív háromfázisú összes meddő fogyasztás" title2="Negatív háromfázisú összes meddő fogyasztás"
+              rgb1="226,216,16" rgb2="217,19,138" rgb3="18,164,217">
+            </app-three-way-chart>
+          </div>
+    </div>
+</div>

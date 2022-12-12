@@ -1,0 +1,32 @@
+<div class=" content">
+  <div class=" row">
+    <div class=" col-md-12">
+      <div class=" card card-plain">
+        <div class="card-header"><h1>Kapcsolók</h1></div>
+        <h2 style="text-align: center; margin-bottom: 5px;">50%-os fényerő</h2>
+        <div style="text-align: center">
+          <label class="switch" style="text-align: center">
+            <input type="checkbox" [checked] = "is_50" [attr.disabled] = "true">
+            <span class="slider round"></span>
+          </label>
+        </div>
+        <div class=" card-body">
+          <div style="display: flex;flex-wrap: wrap; gap: 30px; flex-direction: row;text-align: center;">
+            <div class="card" *ngFor="let zone of zones" style="max-width: 200px;">
+              <div class="card-header">
+                <h4 class="card-title">{{zone.id}}. Zóna</h4>
+                <i class="tim-icons icon-bulb-63 infoButton" routerLink="/lamps"> </i>
+              </div>
+              <div class="card-body">
+                <div style="display: flex; gap:30px; align-items: center; justify-content: space-evenly;">
+                  <app-led-switch *ngIf="!is_50" [is_on]="zone.is_on" [zone]="zone.id"></app-led-switch>
+                  <app-led50-switch *ngIf="is_50" [is_on]="zone.is_on" [zone]="zone.id"></app-led50-switch>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

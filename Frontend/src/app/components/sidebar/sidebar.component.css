@@ -1,0 +1,69 @@
+.sidebar .nav li:first-child > a{
+    margin: 0 15px
+}
+.sidebar .nav li>a+div .nav {
+    margin-top: 5px
+}
+
+.sidebar .nav li>a+div .nav li>a {
+    margin-top: 0;
+    padding: 8px;
+}
+
+.off-canvas-sidebar .sidebar-wrapper .user .info [data-toggle="collapse"]~div>ul>li>a .sidebar-normal,
+.off-canvas-sidebar .sidebar-wrapper>.nav [data-toggle="collapse"]~div>ul>li>a .sidebar-normal,
+.sidebar .sidebar-wrapper .user .info [data-toggle="collapse"]~div>ul>li>a .sidebar-normal,
+.sidebar .sidebar-wrapper>.nav [data-toggle="collapse"]~div>ul>li>a .sidebar-normal {
+    margin: 0;
+    position: relative;
+    transform: translateX(0);
+    opacity: 1;
+    white-space: nowrap;
+    display: block;
+    line-height: 23px;
+    z-index: 1;
+    color: rgba(255, 255, 255, .8);
+}
+.animation-transition-general,
+.card-collapse .card .card-header a[data-toggle="collapse"] i,
+.nav-pills .nav-link,
+.nav-tabs .nav-link,
+.navbar,
+.navbar-collapse .navbar-nav .nav-link,
+.off-canvas-sidebar .logo a.logo-mini,
+.off-canvas-sidebar .logo a.logo-normal,
+.off-canvas-sidebar .nav p,
+.off-canvas-sidebar .navbar-minimize,
+.off-canvas-sidebar .sidebar-wrapper .user .info [data-toggle="collapse"]~div>ul>li>a span,
+.off-canvas-sidebar .sidebar-wrapper>.nav [data-toggle="collapse"]~div>ul>li>a span,
+.off-canvas-sidebar .user .info>a>span,
+.off-canvas-sidebar .user .photo,
+.off-canvas-sidebar .user a,
+.sidebar .logo a.logo-mini,
+.sidebar .logo a.logo-normal,
+.sidebar .nav a,
+.sidebar .nav a i,
+.sidebar .nav p,
+.sidebar .navbar-minimize,
+.sidebar .sidebar-wrapper .user .info [data-toggle="collapse"]~div>ul>li>a span,
+.sidebar .sidebar-wrapper>.nav [data-toggle="collapse"]~div>ul>li>a span,
+.sidebar .user .info>a>span,
+.sidebar .user .photo,
+.sidebar .user a,
+.tag,
+.tag [data-role="remove"] {
+    transition: all .3s ease 0s;
+}
+a[data-toggle="collapse"][aria-expanded="true"] .caret{
+    transform: rotate(180deg);
+}
+.sidebar .nav li.active > a[data-toggle="collapse"] + div .nav .active a::before{
+    content: " ";
+    position: absolute;
+    height: 6px;
+    width: 6px;
+    top: 17px;
+    left: -4px;
+    background: #fff;
+    border-radius: 50%;
+}

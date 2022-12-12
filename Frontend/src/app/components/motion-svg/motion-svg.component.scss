@@ -1,0 +1,13 @@
+.zone{
+    fill: rgb(160, 155, 155);
+}
+.motion:hover {
+    filter: brightness(50%);
+    cursor: pointer;
+}
+.customDiv{
+    padding: 50px;
+    margin: 20px;
+    background: linear-gradient(90deg, rgba(0,217,40,1) 0%, rgba(255,255,0,1) 50%, rgba(119,119,119,1) 100%);
+    border: 5px solid black;
+}
