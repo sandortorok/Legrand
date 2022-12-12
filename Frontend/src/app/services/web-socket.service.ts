@@ -8,9 +8,9 @@ import { Subject } from 'rxjs';
 export class WebsocketService {
   @Output() wsMessage = new EventEmitter();
   outputMessage$ = new Subject<String>();
-  // webSocket: WebSocket = new WebSocket('ws://10.100.0.233:3000/');
+  webSocket: WebSocket = new WebSocket('ws://10.100.0.233:3000/');
   // webSocket: WebSocket = new WebSocket('ws://192.168.4.1:3000/');
-  webSocket: WebSocket = new WebSocket('ws://localhost:3000/');
+  // webSocket: WebSocket = new WebSocket('ws://localhost:3000/');
 
   constructor() { 
     this.openWebSocket();

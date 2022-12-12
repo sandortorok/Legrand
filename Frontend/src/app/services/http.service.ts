@@ -7,9 +7,9 @@ import { Notification } from './notification.service';
 })
 export class HttpService {
   
-  // private url:string = 'http://10.100.0.233:3000';
+  private url:string = 'http://10.100.0.233:3000';
   // private url:string = "http://192.168.4.1:3000";
-  private url:string = "http://localhost:3000";
+  // private url:string = "http://localhost:3000";
 
   constructor(private http:HttpClient) { }
 
