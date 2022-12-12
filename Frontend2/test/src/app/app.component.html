@@ -1,0 +1,39 @@
+<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 5px">
+  <table class="mytable" *ngFor="let input of [inputs1, inputs2]; let idx = index">
+    <tr>
+      <th style="background-color: #2196F3;">Bit</th>
+      <th style="background-color: #2196F3;">Name</th>
+      <th style="background-color: #2196F3;">is_on</th>
+    </tr>
+    <tr *ngFor="let arr of input" [class.onRecord]="arr.is_on">
+      <td>{{arr.bit}}</td>
+      <td>{{arr.name}}</td>
+      <td>
+      <label class="switch">
+        <input type="checkbox" [checked]="arr.is_on" (change)="inputChanged(idx)" [(ngModel)]="arr.is_on">
+        <span class="slider round"></span>
+      </label>
+      </td>
+    </tr>
+  </table>
+</div>
+<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 5px">
+  <table class="mytable" *ngFor="let input of [outputs1, outputs2]">
+    <tr>
+      <th>Bit</th>
+      <th>Name</th>
+      <th>is_on</th>
+    </tr>
+    <tr *ngFor="let arr of input" [class.onRecord]="arr.is_on">
+      <td>{{arr.bit}}</td>
+      <td>{{arr.name}}</td>
+      <td>
+        <label class="switch">
+          <input type="checkbox" [checked]="arr.is_on">
+          <span class="slider round"></span>
+        </label>
+        </td>
+    </tr>
+  </table>
+</div>
+<router-outlet></router-outlet>
