@@ -104,7 +104,7 @@ async function readSaveRegister(register, tableName) {
             else{
                 value = parseInt(binval, 2)
             }
-            if([20538, 20540, 20544, 20548].includes(register)){
+            if([20538, 20540, 20544].includes(register)){
                 value/=100000
             }
             if([20480, 20482, 20484,20509, 20511, 20513, 20548].includes(register)){

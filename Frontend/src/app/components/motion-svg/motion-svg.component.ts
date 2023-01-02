@@ -44,7 +44,8 @@ export class MotionSVGComponent implements OnInit {
       if (z.id == `zone_${motion.zone}_motion`){
         let children = z.children
         for (let c of children){
-          if (c.id == `M${motion.id}`){
+          console.log(c.classList);
+          if(c.classList.contains('motion')){
             let parts = c.children
             for (let p of parts){
               let attributes = p.attributes

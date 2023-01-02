@@ -8,15 +8,15 @@ function input1(payload){
     let obj = {
       M1 : parseInt(bin[0]),
       M2 : parseInt(bin[1]),
-      M3 : parseInt(bin[2]),
-      M4 : parseInt(bin[3]),
+
+
       M5 : parseInt(bin[4]),
       M6 : parseInt(bin[5]),
       M7 : parseInt(bin[6]),
       M8 : parseInt(bin[7]),
       M9 : parseInt(bin[8]),
       M10 : parseInt(bin[9]),
-      M11 : parseInt(bin[10]),
+
       M12 : parseInt(bin[11]),
       M13 : parseInt(bin[12]),
       KEZI_AUTO_NH : parseInt(bin[13]),
@@ -61,7 +61,28 @@ function input2(payload){
     let bin = dec2bin16(payload)
     bin = reverse(bin);
     let obj = {
-        IS_50 : parseInt(bin[0])
+        IS_50 : parseInt(bin[0]),
+        M3 : parseInt(bin[1]),
+        M4 : parseInt(bin[2]),
+        M11 : parseInt(bin[3])
+    }
+    let motionsChanged = false;
+    myMotions.forEach(motion=>{
+        if(Object.keys(obj).includes(motion.name)){
+            if(motion.is_on != obj[motion.name]){
+                console.log(`Motion ${motion.name} changed to ${motion.is_on}`);
+                motion.is_on = obj[motion.name];
+                if(motion.is_on){
+                    let now = new Date()
+                    now = now.setMinutes(now.getMinutes() - now.getTimezoneOffset())
+                    motion.lastSignal = new Date(now)
+                }
+                motionsChanged = true
+            }
+        }
+    })
+    if(motionsChanged && saveMotions){
+        saveMotions(myMotions)
     }
     let extrasChanged = false;
     extras.forEach(extra=>{
