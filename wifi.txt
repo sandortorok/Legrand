@@ -1,7 +1,7 @@
 SSID: Legrand_nodemcu
 password: xeonsoft1234
 
-BROKER IP: 192.168.5.1
+BROKER IP: 192.168.4.1
 
 BEMENET1 MQTT TOPIC: Input/1
 BEMENET2 MQTT TOPIC: Input/2
